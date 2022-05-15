@@ -1,5 +1,5 @@
-  // -    -   -   -   -  //
- // JAVASCRIPT CARNIVAL //
+// -    -   -   -   -  //
+// JAVASCRIPT CARNIVAL //
 // -    -   -   -   -  //
 
-console.log("Inflate The Unicorn!")
+console.log('Inflate The Unicorn!')
