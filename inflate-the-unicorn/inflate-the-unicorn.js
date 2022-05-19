@@ -24,7 +24,8 @@ uni2.onclick = clicked
 // CHANGE SOURCE OF IMAGE TO NEW IMAGE
 
 function clicked(event) {
-  console.log(event)
+  let unicorn = event.target
+  console.log(unicorn)
 }
 
 // CODING WITH JOSEPH'S SESSION
