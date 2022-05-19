@@ -33,11 +33,12 @@ function checkKey(e) {
   }
 }
 
-function changeClothes() {}
+// let headIndex = 0
+// let bodyIndex = 0
+// let shoesIndex = 0
 
-let headIndex = 0
-let bodyIndex = 0
-let shoesIndex = 0
+// AN OPTIMUM WAY TO DO THE SOLUTION
+let indexes = [0, 0, 0]
 
 let wholeIndex = 0
 
@@ -45,40 +46,48 @@ let head = document.getElementById('head')
 let body = document.getElementById('body')
 let shoes = document.getElementById('shoes')
 
+let imgs = [head, body, shoes]
+let strings = ['head', 'body', 'shoes']
+
 function changeClothes(change) {
-  if (wholeIndex == 0) {
-    // NESTED ALL IN AN IF TO IDENTIFY THE HEAD
-    headIndex += change
+  let index = indexes[wholeIndex]
+  let image = imgs[wholeIndex]
+  let str = strings[wholeIndex]
+  // if (wholeIndex == 0) {
+  // NESTED ALL IN AN IF TO IDENTIFY THE HEAD
+  index += change
 
-    if (headIndex < 0) headIndex = 5
+  if (index < 0) index = 5
 
-    if (headIndex > 5) headIndex = 0
+  if (index > 5) index = 0
 
-    head.src = './images/head' + headIndex + '.png'
-  }
+  indexes[wholeIndex] = index
 
-  if (wholeIndex == 1) {
-    // NESTED ALL IN AN IF TO IDENTIFY THE HEAD
-    bodyIndex += change
-
-    if (bodyIndex < 0) bodyIndex = 5
-
-    if (bodyIndex > 5) bodyIndex = 0
-
-    body.src = './images/body' + bodyIndex + '.png'
-  }
-
-  if (wholeIndex == 2) {
-    // NESTED ALL IN AN IF TO IDENTIFY THE HEAD
-    shoesIndex += change
-
-    if (shoesIndex < 0) shoesIndex = 5
-
-    if (shoesIndex > 5) shoesIndex = 0
-
-    shoes.src = './images/shoes' + shoesIndex + '.png'
-  }
+  image.src = './images/' + str + index + '.png'
 }
+
+//   if (wholeIndex == 1) {
+//     // NESTED ALL IN AN IF TO IDENTIFY THE BODY
+//     bodyIndex += change
+
+//     if (bodyIndex < 0) bodyIndex = 5
+
+//     if (bodyIndex > 5) bodyIndex = 0
+
+//     body.src = './images/body' + bodyIndex + '.png'
+//   }
+
+//   if (wholeIndex == 2) {
+//     // NESTED ALL IN AN IF TO IDENTIFY THE SHOES
+//     shoesIndex += change
+
+//     if (shoesIndex < 0) shoesIndex = 5
+
+//     if (shoesIndex > 5) shoesIndex = 0
+
+//     shoes.src = './images/shoes' + shoesIndex + '.png'
+//   }
+// }
 
 function changePart(change) {
   wholeIndex += change
@@ -87,5 +96,3 @@ function changePart(change) {
 
   if (wholeIndex > 2) wholeIndex = 0
 }
-
-// A MORE OPTIMAL WAY TO DO THE CODE ABOVE
