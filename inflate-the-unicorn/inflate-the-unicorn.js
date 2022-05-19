@@ -8,6 +8,14 @@ let uni0 = document.getElementById('uni0')
 let uni1 = document.getElementById('uni1')
 let uni2 = document.getElementById('uni2')
 
+uni0.onclick = clicked()
+uni1.onclick = clicked()
+uni2.onclick = clicked()
+
+function clicked() {
+  console.log('UNI TEST')
+}
+
 // CODING WITH JOSEPH'S SESSION
 
 // MY INITIAL CODE
