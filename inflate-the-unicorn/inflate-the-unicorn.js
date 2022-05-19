@@ -6,20 +6,31 @@
 
 console.log('Inflate The Unicorn!')
 
-let uni0 = document.getElementById('uni0')
-let uni1 = document.getElementById('uni1')
-let uni2 = document.getElementById('uni2')
+// CONNECTING ONCLICK TO GET BY ID
 
-let inflationLevel0 = 0
-let inflationLevel1 = 0
-let inflationLevel2 = 0
+let uni0 = (document.getElementById('uni0').onclick = clicked)
+let uni1 = (document.getElementById('uni1').onclick = clicked)
+let uni2 = (document.getElementById('uni2').onclick = clicked)
+
+// let uni0 = document.getElementById('uni0')
+// let uni1 = document.getElementById('uni1')
+// let uni2 = document.getElementById('uni2')
+
+// STORING ALL IN ONE VARIABLE
+
+let inflation = [0, 0, 0]
+
+// let inflationLevel0 = 0
+// let inflationLevel1 = 0
+// let inflationLevel2 = 0
 
 // REMOVED () FROM THE END OF clicked
 // clicked & event could be named anything
+// CONNECTING ONCLICK TO GET BY ID
 
-uni0.onclick = clicked
-uni1.onclick = clicked
-uni2.onclick = clicked
+// uni0.onclick = clicked
+// uni1.onclick = clicked
+// uni2.onclick = clicked
 
 // SPECIFYING UNICORN CLICKED
 // INFLATION LEVELS OF UNICORN
@@ -30,6 +41,12 @@ uni2.onclick = clicked
 function clicked(event) {
   let unicorn = event.target
   let id = unicorn.id[3]
+
+  inflation[id]++
+
+  if (inflation[id] == 4) inflation[id] = 0
+
+  unicorn.src = './images/unicorn-' + inflation[id] + '.png'
 }
 
 // function clicked(event) {
