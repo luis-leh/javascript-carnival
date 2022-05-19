@@ -37,22 +37,47 @@ function changeClothes() {}
 
 let headIndex = 0
 let bodyIndex = 0
-let feetIndex = 0
+let shoesIndex = 0
 
 let wholeIndex = 0
 
 let head = document.getElementById('head')
 let body = document.getElementById('body')
-let feet = document.getElementById('feet')
+let shoes = document.getElementById('shoes')
 
 function changeClothes(change) {
-  headIndex += change
+  if (wholeIndex == 0) {
+    // NESTED ALL IN AN IF TO IDENTIFY THE HEAD
+    headIndex += change
 
-  if (headIndex < 0) headIndex = 5
+    if (headIndex < 0) headIndex = 5
 
-  if (headIndex > 5) headIndex = 0
+    if (headIndex > 5) headIndex = 0
 
-  head.src = './images/head' + headIndex + '.png'
+    head.src = './images/head' + headIndex + '.png'
+  }
+
+  if (wholeIndex == 0) {
+    // NESTED ALL IN AN IF TO IDENTIFY THE HEAD
+    bodyIndex += change
+
+    if (bodyIndex < 0) bodyIndex = 5
+
+    if (bodyIndex > 5) bodyIndex = 0
+
+    head.src = './images/body' + bodyIndex + '.png'
+  }
+
+  if (wholeIndex == 0) {
+    // NESTED ALL IN AN IF TO IDENTIFY THE HEAD
+    shoesIndex += change
+
+    if (shoesIndex < 0) shoesIndex = 5
+
+    if (shoesIndex > 5) shoesIndex = 0
+
+    head.src = './images/shoes' + shoesIndex + '.png'
+  }
 }
 
 function changePart(change) {
