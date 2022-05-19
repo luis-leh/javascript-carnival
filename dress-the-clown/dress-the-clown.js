@@ -57,4 +57,8 @@ function changeClothes(change) {
 
 function changePart(change) {
   wholeIndex += change
+
+  if (wholeIndex < 0) wholeIndex = 2
+
+  if (wholeIndex > 2) wholeIndex = 0
 }
