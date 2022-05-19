@@ -4,6 +4,10 @@
 
 console.log('Inflate The Unicorn!')
 
+// CODING WITH JOSEPH'S SESSION
+
+// MY INITIAL CODE
+
 // Write a function that gets called every time you click on a unicorn
 
 // let myImage = document.querySelector('inflate-an-image')
