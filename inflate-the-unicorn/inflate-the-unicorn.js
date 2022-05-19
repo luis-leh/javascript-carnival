@@ -8,12 +8,23 @@ let uni0 = document.getElementById('uni0')
 let uni1 = document.getElementById('uni1')
 let uni2 = document.getElementById('uni2')
 
-uni0.onclick = clicked()
-uni1.onclick = clicked()
-uni2.onclick = clicked()
+let inflationLevel0 = 0
+let inflationLevel1 = 0
+let inflationLevel2 = 0
 
-function clicked() {
-  console.log('UNI TEST')
+// REMOVED () FROM THE END OF clicked
+// clicked & event could be named anything
+
+uni0.onclick = clicked
+uni1.onclick = clicked
+uni2.onclick = clicked
+
+// SPECIFYING UNICORN CLICKED
+// INFLATION LEVELS OF UNICORN
+// CHANGE SOURCE OF IMAGE TO NEW IMAGE
+
+function clicked(event) {
+  console.log(event)
 }
 
 // CODING WITH JOSEPH'S SESSION
