@@ -25,17 +25,41 @@ uni2.onclick = clicked
 // INFLATION LEVELS OF UNICORN
 // CHANGE SOURCE OF IMAGE TO NEW IMAGE
 
+// TRYING TO DO IT WITH LESSER CODE
+
 function clicked(event) {
   let unicorn = event.target
-
-  if (unicorn.id === 'uni0') {
-    inflationLevel0++
-
-    if (inflationLevel0 === 4) inflationLevel0 = 0
-
-    unicorn.src = './images/unicorn-' + inflationLevel0 + '.png'
-  }
+  let id = unicorn.id[3]
 }
+
+// function clicked(event) {
+//   let unicorn = event.target
+//   let id = unicorn.id[3]
+
+//   if (unicorn.id === 'uni0') {
+//     inflationLevel0++
+
+//     if (inflationLevel0 === 4) inflationLevel0 = 0
+
+//     unicorn.src = './images/unicorn-' + inflationLevel0 + '.png'
+// }
+
+// if (unicorn.id === 'uni1') {
+//   inflationLevel1++
+
+//   if (inflationLevel1 === 4) inflationLevel1 = 0
+
+//   unicorn.src = './images/unicorn-' + inflationLevel1 + '.png'
+// }
+
+// if (unicorn.id === 'uni2') {
+//   inflationLevel2++
+
+//   if (inflationLevel2 === 4) inflationLevel2 = 0
+
+//   unicorn.src = './images/unicorn-' + inflationLevel2 + '.png'
+// }
+// }
 
 // MY INITIAL CODE
 
