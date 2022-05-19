@@ -4,6 +4,10 @@
 
 console.log('Inflate The Unicorn!')
 
+let uni0 = document.getElementById('uni0')
+let uni1 = document.getElementById('uni1')
+let uni2 = document.getElementById('uni2')
+
 // CODING WITH JOSEPH'S SESSION
 
 // MY INITIAL CODE
