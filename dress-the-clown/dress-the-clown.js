@@ -19,8 +19,10 @@ function checkKey(e) {
   console.log(e)
 
   if (e.keyCode == '38') {
+    changePart(-1)
     // up arrow
   } else if (e.keyCode == '40') {
+    changePart(1)
     // down arrow
   } else if (e.keyCode == '37') {
     changeClothes(-1)
@@ -34,6 +36,10 @@ function checkKey(e) {
 function changeClothes() {}
 
 let headIndex = 0
+let bodyIndex = 0
+let feetIndex = 0
+
+let wholeIndex = 0
 
 let head = document.getElementById('head')
 let body = document.getElementById('body')
@@ -47,4 +53,8 @@ function changeClothes(change) {
   if (headIndex > 5) headIndex = 0
 
   head.src = './images/head' + headIndex + '.png'
+}
+
+function changePart(change) {
+  wholeIndex += change
 }
