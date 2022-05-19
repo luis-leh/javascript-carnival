@@ -57,7 +57,7 @@ function changeClothes(change) {
     head.src = './images/head' + headIndex + '.png'
   }
 
-  if (wholeIndex == 0) {
+  if (wholeIndex == 1) {
     // NESTED ALL IN AN IF TO IDENTIFY THE HEAD
     bodyIndex += change
 
@@ -65,10 +65,10 @@ function changeClothes(change) {
 
     if (bodyIndex > 5) bodyIndex = 0
 
-    head.src = './images/body' + bodyIndex + '.png'
+    body.src = './images/body' + bodyIndex + '.png'
   }
 
-  if (wholeIndex == 0) {
+  if (wholeIndex == 2) {
     // NESTED ALL IN AN IF TO IDENTIFY THE HEAD
     shoesIndex += change
 
@@ -76,7 +76,7 @@ function changeClothes(change) {
 
     if (shoesIndex > 5) shoesIndex = 0
 
-    head.src = './images/shoes' + shoesIndex + '.png'
+    shoes.src = './images/shoes' + shoesIndex + '.png'
   }
 }
 
@@ -87,3 +87,5 @@ function changePart(change) {
 
   if (wholeIndex > 2) wholeIndex = 0
 }
+
+// A MORE OPTIMAL WAY TO DO THE CODE ABOVE
