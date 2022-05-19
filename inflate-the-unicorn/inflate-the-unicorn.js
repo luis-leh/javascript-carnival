@@ -2,6 +2,8 @@
 // JAVASCRIPT CARNIVAL //
 // -    -   -   -   -  //
 
+// CODING WITH JOSEPH'S SESSION
+
 console.log('Inflate The Unicorn!')
 
 let uni0 = document.getElementById('uni0')
@@ -25,10 +27,15 @@ uni2.onclick = clicked
 
 function clicked(event) {
   let unicorn = event.target
-  console.log(unicorn)
-}
 
-// CODING WITH JOSEPH'S SESSION
+  if (unicorn.id === 'uni0') {
+    inflationLevel0++
+
+    if (inflationLevel0 === 4) inflationLevel0 = 0
+
+    unicorn.src = './images/unicorn-' + inflationLevel0 + '.png'
+  }
+}
 
 // MY INITIAL CODE
 
