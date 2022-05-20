@@ -14,3 +14,7 @@ let cells = document.getElementsByTagName('td')
 
 // Google - "get random int in range"
 let randomIndex = Math.floor(Math.random() * cells.length)
+
+let randomCell = cells[randomIndex] // why does this work?
+
+// Google - ""
