@@ -17,4 +17,8 @@ let randomIndex = Math.floor(Math.random() * cells.length)
 
 let randomCell = cells[randomIndex] // why does this work?
 
-// Google - ""
+// Google - "create HTML image with JavaScript"
+let mole = document.createElement('img')
+mole.src = './mole.png'
+mole.id = 'mole'
+randomCell.appendChild(mole)
