@@ -22,3 +22,14 @@ let mole = document.createElement('img')
 mole.src = './mole.png'
 mole.id = 'mole'
 randomCell.appendChild(mole)
+
+mole.onclick = whackedMole
+
+function whackedMole() {
+  // Get new random cell for the mole to reappear in
+  randomIndex = Math.floor(Math.random() * cells.length)
+  randomCell = cells[randomIndex]
+  randomCell.appendChild(mole)
+}
+
+// Google - "play audio with JavaScript"
