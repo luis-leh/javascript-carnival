@@ -10,18 +10,22 @@ console.log('Whack-a-Mole!')
 // MOLE RESPAWNS IN ANOTHER CELL
 
 // Google - "how to get elements by tag name?"
+// GETTING A CELLS ARRAY
 let cells = document.getElementsByTagName('td')
 
 // Google - "get random int in range"
+// GETTING A RANDOM INDEX
 let randomIndex = Math.floor(Math.random() * cells.length)
 
+// GETTING A RANDOM CELL
 let randomCell = cells[randomIndex] // why does this work?
 
 // Google - "create HTML image with JavaScript"
+// MAKING A NEW IMAGE
 let mole = document.createElement('img')
 mole.src = './mole.png'
-mole.id = 'mole'
-randomCell.appendChild(mole)
+mole.id = 'mole' // fix sizing issue
+randomCell.appendChild(mole) // append mole to random cell
 
 mole.onclick = whackedMole
 
