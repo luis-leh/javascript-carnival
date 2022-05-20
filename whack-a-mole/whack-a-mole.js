@@ -30,6 +30,8 @@ function whackedMole() {
   randomIndex = Math.floor(Math.random() * cells.length)
   randomCell = cells[randomIndex]
   randomCell.appendChild(mole)
-}
 
-// Google - "play audio with JavaScript"
+  // Google - "play audio with JavaScript"
+  let audio = new Audio('./whack-audio.wav')
+  audio.play()
+}
